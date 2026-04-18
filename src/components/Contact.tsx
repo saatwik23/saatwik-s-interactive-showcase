@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileDown } from "lucide-react";
+
 
 const Linkedin = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
