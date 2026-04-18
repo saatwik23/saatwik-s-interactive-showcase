@@ -55,6 +55,9 @@
   --color-violet-glow: var(--violet-glow);
   --color-violet-soft: var(--violet-soft);
   --color-ink: var(--ink);
+
+  --shadow-soft: 0 10px 40px -10px oklch(0.55 0.25 280 / 0.18);
+  --shadow-card: 0 20px 60px -20px oklch(0.3 0.1 280 / 0.25);
 }
 
 :root {
