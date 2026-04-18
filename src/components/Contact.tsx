@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileDown } from "lucide-react";
+
 
 const Linkedin = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -38,9 +38,8 @@ export function Contact() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            <SocialButton href="#" icon={Linkedin} label="LinkedIn" />
-            <SocialButton href="#" icon={Github} label="GitHub" />
-            <SocialButton href="#" icon={FileDown} label="Resume" primary />
+            <SocialButton href="https://www.linkedin.com/in/saatwik-shrivastava/" icon={Linkedin} label="LinkedIn" />
+            <SocialButton href="https://github.com/saatwik23" icon={Github} label="GitHub" />
           </div>
         </div>
       </motion.div>
