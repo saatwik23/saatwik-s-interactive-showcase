@@ -1,26 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Loader } from "@/components/Loader";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Experience } from "@/components/Experience";
+import { Projects } from "@/components/Projects";
+import { Skills } from "@/components/Skills";
+import { Certifications } from "@/components/Certifications";
+import { Contact } from "@/components/Contact";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Saatwik Shrivastava — Frontend Developer & AI Enthusiast" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Saatwik Shrivastava — Frontend Developer, AI Enthusiast and Builder. React, modern UI, AI workflows, and shipped real-world projects.",
+      },
+      { property: "og:title", content: "Saatwik Shrivastava — Frontend Developer Portfolio" },
+      {
+        property: "og:description",
+        content: "Frontend Developer · AI Enthusiast · Builder. See projects, experience and skills.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <main className="min-h-screen pb-10">
+      <Loader onDone={() => setLoaded(true)} />
+      {loaded && (
+        <>
+          <Navbar />
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Certifications />
+          <Contact />
+        </>
+      )}
+    </main>
+  );
 }
