@@ -57,18 +57,9 @@ export function Certifications() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
-                <div className="flex items-center justify-between text-sm font-medium">
+                <div className="flex items-center gap-3 text-sm font-medium">
+                  <span className="h-1.5 w-1.5 rounded-full bg-violet-gradient" />
                   <span>{l}</span>
-                  <span className="text-muted-foreground">{60 + i * 6}%</span>
-                </div>
-                <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${60 + i * 6}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2 + i * 0.1, ease: "easeOut" }}
-                    className="h-full bg-violet-gradient"
-                  />
                 </div>
               </motion.div>
             ))}
