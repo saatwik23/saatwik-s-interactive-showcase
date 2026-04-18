@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Code2, Sparkles, Star, Cpu, Atom } from "lucide-react";
+import { ArrowRight, Code2, Sparkles, Star, Cpu, Atom } from "lucide-react";
 
 export function Hero() {
   return (
@@ -48,13 +48,6 @@ export function Hero() {
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
-            >
-              <Download className="h-4 w-4" />
-              Download Resume
             </a>
           </motion.div>
         </div>

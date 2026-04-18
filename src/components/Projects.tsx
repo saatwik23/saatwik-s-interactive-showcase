@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
 import { SectionHeader } from "./About";
 
 export function Projects() {
@@ -38,13 +38,6 @@ export function Projects() {
                 )}
               </div>
 
-              <a
-                href="#"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white"
-                style={{ backgroundColor: "oklch(0.12 0.02 270)" }}
-              >
-                View case study <ArrowUpRight className="h-4 w-4" />
-              </a>
             </div>
 
             {/* Mock browser preview */}
@@ -66,9 +59,6 @@ export function Projects() {
                       <div key={i} className="h-16 rounded-xl bg-card shadow-soft" />
                     ))}
                   </div>
-                  <button className="w-full rounded-full bg-ink py-3 text-sm font-semibold text-white" style={{ backgroundColor: "oklch(0.12 0.02 270)" }}>
-                    Trigger Emergency
-                  </button>
                 </div>
               </div>
             </div>
