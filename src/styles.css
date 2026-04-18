@@ -55,6 +55,9 @@
   --color-violet-glow: var(--violet-glow);
   --color-violet-soft: var(--violet-soft);
   --color-ink: var(--ink);
+
+  --shadow-soft: 0 10px 40px -10px oklch(0.55 0.25 280 / 0.18);
+  --shadow-card: 0 20px 60px -20px oklch(0.3 0.1 280 / 0.25);
 }
 
 :root {
@@ -107,8 +110,6 @@
   --gradient-violet: linear-gradient(135deg, oklch(0.6 0.26 280), oklch(0.55 0.25 295));
   --gradient-purple-frame: linear-gradient(160deg, oklch(0.72 0.18 285), oklch(0.62 0.22 290));
 
-  --shadow-soft: 0 10px 40px -10px oklch(0.55 0.25 280 / 0.18);
-  --shadow-card: 0 20px 60px -20px oklch(0.3 0.1 280 / 0.25);
 }
 
 .dark {
@@ -171,15 +172,14 @@
   .bg-violet-gradient { background: var(--gradient-violet); }
   .bg-purple-frame { background: var(--gradient-purple-frame); }
 
-  .shadow-soft { box-shadow: var(--shadow-soft); }
-  .shadow-card { box-shadow: var(--shadow-card); }
 
   .pill {
     @apply inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium;
   }
 
   .floating-card {
-    @apply rounded-2xl border border-border bg-card/90 backdrop-blur-sm shadow-soft;
+    @apply rounded-2xl border border-border bg-card/90 backdrop-blur-sm;
+    box-shadow: var(--shadow-soft);
   }
 }
 
