@@ -179,7 +179,8 @@
   }
 
   .floating-card {
-    @apply rounded-2xl border border-border bg-card/90 backdrop-blur-sm shadow-soft;
+    @apply rounded-2xl border border-border bg-card/90 backdrop-blur-sm;
+    box-shadow: var(--shadow-soft);
   }
 }
 
