@@ -34,7 +34,7 @@ export function Contact() {
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Reach me on the platforms below or grab my resume — I'll get back fast.
+            Reach me on the platforms below — I'll get back fast.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
